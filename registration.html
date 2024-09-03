@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Ankh</title>
+  <title>Registration Form</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -17,390 +17,231 @@
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Homemade+Apple&family=Jersey+20&display=swap" rel="stylesheet">
+
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-    Theme Name: TheEvent
-    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
   <style>
     .cinzel {
       font-family: "Cinzel Decorative", serif;
-  font-weight: 700;
-  font-style: normal;
+      font-weight: 700;
+      font-style: normal;
     }
 
-    h1 , h2, h3 ,h4 ,h5 ,h6 {
+    h1, h2, h3, h4, h5, h6 {
       text-transform: capitalize;
     }
 
-    button { background: #152b79;
-  border: 0;
-  padding: 10px 40px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-  cursor: pointer;}
+    button {
+      background: #152b79;
+      border: 0;
+      padding: 10px 40px;
+      color: #fff;
+      transition: 0.4s;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .alert {
+      margin-top: 20px;
+    }
   </style>
 </head>
 
 <body>
-   <!-- social icons <div class="social"> 
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>-->
   <!--==========================
-    Header
+    Header with Menu
   ============================-->
   <header id="header">
     <div class="container">
-
       <div id="logo" class="pull-left">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="index.html" class="scrollto" ><img src="img/logoc.png" alt="" title="" ></a>
+        <a href="index.html" class="scrollto"><img src="img/logoc.png" alt="Ankh Innovation"></a>
       </div>
 
-      <!-- #nav-menu-container -->
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#speakers">Challenges</a></li>
+          <li><a href="index.html#schedule">Schedule</a></li>
+          <li><a href="registration.html">Apply</a></li>
+          <li><a href="index.html#hotels">Winners</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#supporters">Sponsors</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
 
   <!--==========================
-    Intro Section
+    Main Registration Form
   ============================-->
- 
-
   <main id="main">
-
-    <!--==========================
-      About Section
-    ============================-->
-   
-
-    <!--==========================
-      Speakers Section
-    ============================-->
-    
-
-    <!--==========================
-      Schedule Section
-    ============================-->
- 
-    <!--==========================
-      Venue Section
-    ============================-->
     <section id="venue" class="section-bg wow fadeInUp">
-
       <div class="container">
-
         <div class="section-header">
           <h2>Apply</h2>
-          <p>The Team solutions and details.</p>
-        </div>
-
-        <div class="row contact-info">
-
-       
-     
-
-         
-
+          <p>Provide all the necessary information to describe your solution.</p>
         </div>
 
         <div class="form">
-         
-          <h1>the problem's details</h1>
-          <p>Add all the necessary information to describe your solution,
-             including all the required resources with the minimum capabilities needed.
-              Calculate the time needed to create a prototype of the solution, 
-            considering that the hackathon lasts 4 days. Attach a video where you talk about the solution within 3 minutes</p>
-          <form action="" method="post" role="form" class="contactForm">
+          <form action="process_registration.php" method="post" role="form" class="contactForm" enctype="multipart/form-data">
+            <h1>Problem's Details</h1>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="number" name="problems" class="form-control" id="problems" placeholder="Your problem number" />
-                <div class="validation"></div>
+                <input type="number" name="problems" class="form-control" id="problems" placeholder="Problem Number" required />
               </div>
               <div class="form-group col-md-6">
-                <input type="file" class="form-control" name="file" id="filey" placeholder="Your file" />
-                <div class="validation"></div>
+                <input type="file" class="form-control" name="file" id="file" required />
               </div>
             </div>
-        
-            
-          
 
+            <div class="form-group">
+              <input type="text" name="team_name" class="form-control" id="team_name" placeholder="Team Name" required />
+            </div>
 
-           <!--==========================
-      About Section
-    ============================-->
-    <section id="about" style="margin-top: 40px;margin-bottom: 40px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-      
-          </div>
-        </div>
-      </div>
-    </section>
-<!--
-   somethugnbbjidfnsidjn       
---> <h1>the leader's details</h1>
-          <form action="" method="post" role="form" class="contactForm">
+            <h1>Leader's Details</h1>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="nameleader" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
+                <input type="text" name="name" class="form-control" id="nameleader" placeholder="Leader's Name" required />
               </div>
               <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="emailleader" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
+                <input type="email" class="form-control" name="email" id="emailleader" placeholder="Leader's Email" required />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="number" name="phone" class="form-control" id="phoneleader" placeholder="Your phone number" data-rule="minlen:11" data-msg="Please enter at least 11 chars" />
-                <div class="validation"></div>
+                <input type="number" name="phone" class="form-control" id="phoneleader" placeholder="Leader's Phone Number" required />
               </div>
               <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="University" id="Universityleader" placeholder="Your University" />
-                <div class="validation"></div>
+                <input type="text" class="form-control" name="University" id="Universityleader" placeholder="Leader's University" required />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="text" name="graduation" class="form-control" id="graduationleader" placeholder="Your graduation date"  />
-                <div class="validation"></div>
+                <input type="text" name="graduation" class="form-control" id="graduationleader" placeholder="Leader's Graduation Date" required />
               </div>
               <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="speciality" id="specialityleader" placeholder="Your Major" />
-                <div class="validation"></div>
+                <input type="text" class="form-control" name="speciality" id="specialityleader" placeholder="Leader's Major" required />
               </div>
             </div>
-           
-       
-                 <!--==========================
-      About Section
-    ============================-->
-    <section id="about" style="margin-top: 40px;margin-bottom: 40px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-      
-          </div>
+
+            <!-- Team Members' Details -->
+            <h1>1st Member's Details</h1>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name1" class="form-control" id="name1" placeholder="Member's Name" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email1" id="email1" placeholder="Member's Email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="number" name="phone1" class="form-control" id="phone1" placeholder="Member's Phone Number" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="University1" id="University1" placeholder="Member's University" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="graduation1" class="form-control" id="graduation1" placeholder="Member's Graduation Date" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="speciality1" id="speciality1" placeholder="Member's Major" required />
+              </div>
+            </div>
+
+            <h1>2nd Member's Details</h1>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name2" class="form-control" id="name2" placeholder="Member's Name" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email2" id="email2" placeholder="Member's Email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="number" name="phone2" class="form-control" id="phone2" placeholder="Member's Phone Number" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="University2" id="University2" placeholder="Member's University" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="graduation2" class="form-control" id="graduation2" placeholder="Member's Graduation Date" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="speciality2" id="speciality2" placeholder="Member's Major" required />
+              </div>
+            </div>
+
+            <h1>3rd Member's Details</h1>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name3" class="form-control" id="name3" placeholder="Member's Name" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email3" id="email3" placeholder="Member's Email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="number" name="phone3" class="form-control" id="phone3" placeholder="Member's Phone Number" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="University3" id="University3" placeholder="Member's University" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="graduation3" class="form-control" id="graduation3" placeholder="Member's Graduation Date" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="speciality3" id="speciality3" placeholder="Member's Major" required />
+              </div>
+            </div>
+
+            <h1>4th Member's Details</h1>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name4" class="form-control" id="name4" placeholder="Member's Name" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email4" id="email4" placeholder="Member's Email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="number" name="phone4" class="form-control" id="phone4" placeholder="Member's Phone Number" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="University4" id="University4" placeholder="Member's University" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="graduation4" class="form-control" id="graduation4" placeholder="Member's Graduation Date" required />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="speciality4" id="speciality4" placeholder="Member's Major" required />
+              </div>
+            </div>
+
+            <div class="text-center"><button type="submit">Submit</button></div>
+          </form>
         </div>
       </div>
     </section>
-<!--
-   somethugnbbjidfnsidjn       
---> <h1>the 1st members's details</h1>
-<form action="" method="post" role="form" class="contactForm">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-      <div class="validation"></div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="number" name="phone" class="form-control" id="phone" placeholder="Your phone number" data-rule="minlen:11" data-msg="Please enter at least 11 chars" />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" name="University" id="University" placeholder="Your University" />
-      <div class="validation"></div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" name="graduation" class="form-control" id="graduation" placeholder="Your graduation date"  />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" name="speciality" id="speciality" placeholder="Your Major" />
-      <div class="validation"></div>
-    </div>
-  </div>
- 
-
-
-     <!--==========================
-      About Section
-    ============================-->
-    <section id="about" style="margin-top: 40px;margin-bottom: 40px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-      
-          </div>
-        </div>
-      </div>
-    </section>
-<!--
-   somethugnbbjidfnsidjn       
---> <h1>the 2nd members's details</h1>
-<form action="" method="post" role="form" class="contactForm">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" name="name" class="form-control" id="sname" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="email" class="form-control" name="email" id="semail" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-      <div class="validation"></div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="number" name="phone" class="form-control" id="sphone" placeholder="Your phone number" data-rule="minlen:11" data-msg="Please enter at least 11 chars" />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" name="University" id="sUniversity" placeholder="Your University" />
-      <div class="validation"></div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" name="graduation" class="form-control" id="sgraduation" placeholder="Your graduation date"  />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" name="speciality" id="sspeciality" placeholder="Your Major" />
-      <div class="validation"></div>
-    </div>
-  </div>
- 
-
-     <!--==========================
-      About Section
-    ============================-->
-    <section id="about" style="margin-top: 40px;margin-bottom: 40px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-      
-          </div>
-        </div>
-      </div>
-    </section>
-<!--
-   somethugnbbjidfnsidjn       
---> <h1>the 3rd members's details</h1>
-<form action="" method="post" role="form" class="contactForm">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" name="name" class="form-control" id="ssname" placeholder="Your Name"  />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="email" class="form-control" name="email" id="ssemail" placeholder="Your Email"  />
-      <div class="validation"></div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="number" name="phone" class="form-control" id="ssphone" placeholder="Your phone number"  />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" name="University" id="ssUniversity" placeholder="Your University" />
-      <div class="validation"></div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" name="graduation" class="form-control" id="ssgraduation" placeholder="Your graduation date"  />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" name="speciality" id="ssspeciality" placeholder="Your Major" />
-      <div class="validation"></div>
-    </div>
-  </div>
- 
-
-     <!--==========================
-      About Section
-    ============================-->
-    <section id="about" style="margin-top: 40px;margin-bottom: 40px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-      
-          </div>
-        </div>
-      </div>
-    </section>
-<!--
-   somethugnbbjidfnsidjn       
---> <h1>the 4th members's details</h1>
-<form action="" method="post" role="form" class="contactForm">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" name="name" class="form-control" id="sssname" placeholder="Your Name"  />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="email" class="form-control" name="email" id="sssemail" placeholder="Your Email"  />
-      <div class="validation"></div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="number" name="phone" class="form-control" id="sssphone" placeholder="Your phone number"  />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" name="University" id="sssUniversity" placeholder="Your University" />
-      <div class="validation"></div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" name="graduation" class="form-control" id="sssgraduation" placeholder="Your graduation date"  />
-      <div class="validation"></div>
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" name="speciality" id="sssspeciality" placeholder="Your Major" />
-      <div class="validation"></div>
-    </div>
-  </div>
- <hr>
-  <div class="text-center"><button type="submit" >Send Message</button></div>
-</form>
-
-        </div>
-
-      </div>
-    </section>
-    <section  class="section-with-bg wow fadeInUp justify-content-center" style="margin-bottom: 40px;"><div class="container"> 
-      <div class="text-center">
-      
-      </div></div>
-  
-  
-    </section>
-   
   </main>
- 
 
   <!--==========================
     Footer
@@ -409,28 +250,39 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
-          <div class=" footer-info">
+          <div class="col-lg-3 col-md-6 footer-info">
             <img src="img/trans.png" alt="Ankh">
             <p>Ankh Hackathon aims to find innovative solutions to industrial problems using revolutionary technologies
               The Fourth Industrial, includes training sessions, workshops, technical support, evaluation by experts, with the provision of
-              Prizes and certificates for participants and winners. The hackathon will be promoted via social media
-              Cooperation with universities and companies.</p>
-              
+              Prizes and certificates for participants and winners.</p>
           </div>
-          <a href="index.html"> <button class="justify-content-center" style="background: #152b79;
-            border: 0;
-            padding: 10px 40px;
-            color: #fff;
-            transition: 0.4s;
-            border-radius: 50px;
-            cursor: pointer; 
-            ">Go back</button></a>
-     
-         
-       
 
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="registration.html">Apply Now</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
 
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Phone:</strong> +20 1101013899<br>
+              <strong>Email:</strong> info@ankhinnovation.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -439,17 +291,8 @@
       <div class="copyright">
         &copy; Copyright <strong><span style="color: #f82249;">Ankh</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
-        -->
-      
-      </div>
     </div>
-  </footer><!-- #footer -->
+  </footer>
 
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
@@ -463,11 +306,6 @@
   <script src="lib/wow/wow.min.js"></script>
   <script src="lib/venobox/venobox.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 </body>
 
